@@ -67,7 +67,7 @@ INSTALLED_APPS = [
     # django apps
     # todo
     "todo",
-    "users",
+    "customers"
 ]
 
 MIDDLEWARE = [
