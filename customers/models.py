@@ -18,7 +18,9 @@ class BaseActivityModel(models.Model):
         
         
 class Customer(BaseActivityModel):
+    
     """ A basic customer model to store all necessary customer information. """
+    
     user = models.OneToOneField(
         User, 
         on_delete=models.CASCADE, 
