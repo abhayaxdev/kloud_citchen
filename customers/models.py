@@ -24,7 +24,9 @@ class Customer(BaseActivityModel):
     user = models.OneToOneField(
         User, 
         on_delete=models.CASCADE, 
-        related_name="customer"
+        related_name="customer",
+        null=True, 
+        blank=True
     )
     first_name = models.CharField(
         max_length=50, 
