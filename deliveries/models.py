@@ -14,7 +14,6 @@ class DeliveryRider(BaseActivityModel):
     
     """This model will store basic delivery rider related information."""
     
-    #code = models.CharField
     
     user = models.OneToOneField(
         User, 
@@ -100,11 +99,6 @@ class Delivery(BaseActivityModel):
         related_name="delivered_to"
         
     )
-    # order = models.OneToOneField(
-    #     "Order",
-    #     on_delete=models.CASCADE,
-    #     related_name="order_to_deliver"
-    # )
     delivery_status = models.IntegerField(
         verbose_name="Delivery Status",
         choices=DeliveryStatus.choices,
