@@ -92,13 +92,14 @@ class Delivery(BaseActivityModel):
         DeliveryRider,
         verbose_name="Delivery rider",
         on_delete=models.SET_NULL,
-        related_name="deliverd_by"
+        related_name="deliverd_by",
+        null=True
     )
     customer = models.ForeignKey(
         Customer,
         on_delete=models.SET_NULL,
-        related_name="delivered_to"
-        
+        related_name="delivered_to",
+        null=True
     )
     # order = models.OneToOneField(
     #     "Order",
